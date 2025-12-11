@@ -533,7 +533,7 @@ a {
 }
 
 .tab__title {
-  font-family: Sora;
+  font-family: Sora, sans-serif;
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 1;
@@ -573,4 +573,73 @@ a {
 .tab__content-more::after {
   opacity: 1;
   height: 1.5px;
+}
+
+/* =================================================== Service ====================================================== */
+.service {
+  margin-top: 190px;
+  background: #fff6ed;
+  padding: 68px 0 100px;
+}
+
+.service__top {
+  text-align: center;
+}
+
+.service__desc {
+  font-family: Sora, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #5e6085;
+  margin-bottom: 15px;
+}
+
+.service__body {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin-top: 71px;
+}
+
+.service-item {
+  width: 294px;
+  padding: 30px;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px solid #ffbc7a42;
+}
+
+.service-item + .service-item {
+  /* Đứng sau class service-item mới bị còn không thì giữ nguyên */
+  margin-top: 24px;
+}
+
+.service-item__heading {
+  font-family: Sora, sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #000958;
+}
+
+.service-item__desc {
+  margin-top: 18px;
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: #656689;
+}
+
+.service-item__more {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  font-family: Sora, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #34396a;
+}
+
+.service-item__more::after {
+  content: url(../icons/arrow-up-right.svg);
+  margin: 1px 0 0 6px;
 }
