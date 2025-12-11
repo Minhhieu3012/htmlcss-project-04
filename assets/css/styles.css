@@ -598,12 +598,14 @@ a {
 .service__body {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin-top: 71px;
+  margin-top: 65px;
+  column-gap: 70px;
 }
 
 .service-item {
   width: 294px;
-  padding: 30px;
+  height: 208px;
+  padding: 30px 22px 30px 28px;
   border-radius: 10px;
   background: #fff;
   border: 2px solid #ffbc7a42;
@@ -615,11 +617,23 @@ a {
 }
 
 .service-item__heading {
+  position: relative;
   font-family: Sora, sans-serif;
   font-weight: 600;
   font-size: 2.2rem;
   line-height: 1;
   color: #000958;
+  padding-left: 12px;
+}
+
+.service-item__heading::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  content: "";
+  display: inline-block;
+  width: 2px;
+  border-radius: 1px;
+  background: linear-gradient(#ff5b2e, #ffa187);
 }
 
 .service-item__desc {
@@ -642,4 +656,38 @@ a {
 .service-item__more::after {
   content: url(../icons/arrow-up-right.svg);
   margin: 1px 0 0 6px;
+}
+
+.service__media {
+  margin-top: 18px;
+  position: relative;
+}
+
+.service__media::after {
+  content: "";
+  position: absolute;
+  inset: 243px 15px 0 22px;
+  height: 350px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+  position: relative; /* Phải định vị thì mới dùng được z-index */
+  z-index: 1; /* Vì có nền nên phải thêm vào để nó nổi lên */
+  width: 100%;
+}
+
+.service__cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.service__cta {
+  min-width: 214px;
+  color: #ff5b2e;
+  border-radius: 31px;
+  border: 1px solid currentColor;
+  box-shadow: 0px 13px 26px -8px #ff5b2e6b;
 }
