@@ -1199,7 +1199,11 @@ a {
 /* =================================================== Footer ====================================================== */
 .footer {
   margin-top: 53px;
-  background: #fff6ed;
+  background: linear-gradient(
+    to right,
+    #fff6ed 43%,
+    transparent 42%
+  ); /* Bắt đầu từ trái sang phải, #fff6ed nó sẽ chiếm tới 42% là kết thúc, còn khúc sau là chiếm từ 42% tới hết */
 }
 
 .footer__inner {
@@ -1208,9 +1212,10 @@ a {
 
 .footer__left {
   padding: 114px 0 148px;
+  width: 42%;
 }
 
-.search-form {
+.subscribe-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1222,16 +1227,24 @@ a {
   background: #fff;
 }
 
-.search-form__input {
+.subscribe-form__input {
   width: 100%;
   height: 100%;
   padding: 0 22px;
   border: none;
   outline: none;
   border-radius: inherit;
+  font-size: 1.4rem;
 }
 
-.search-form__submit {
+.subscribe-form__input::placeholder {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.17;
+  color: #656689;
+}
+
+.subscribe-form__submit {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1246,7 +1259,7 @@ a {
   border: none;
 }
 
-.search-form__submit:hover {
+.subscribe-form__submit:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -1276,4 +1289,39 @@ a {
 
 .social-item:hover {
   opacity: 0.9;
+}
+
+.footer__right {
+  flex: 1;
+  padding: 52px 0 48px 0;
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 137px;
+  row-gap: 58px;
+  padding-left: 129px;
+}
+
+.footer__list {
+  margin-top: 14px;
+}
+
+.footer__link {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #656689;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  margin: 52px 0 0 22px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.17;
+  color: #656689;
 }
