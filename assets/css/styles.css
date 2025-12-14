@@ -53,7 +53,7 @@ a {
   min-width: 130px;
   height: var(--height);
   line-height: var(--height);
-  border: 1px solid rgb(0, 9, 88, 0.7); /* đổi thành rgb thêm tham số alpha thay vì dùng opacity sẽ làm mờ cả chữ */
+  border: 1px solid rgb(0, 9, 88, 0.7);
   border-radius: 99px;
 
   font-weight: 600;
@@ -150,7 +150,7 @@ a {
 .hero__media {
   position: relative;
   display: flex;
-  padding-bottom: 94px; /* Thêm vào để nội dung sau này nó chạm phần box trắng thay vì ảnh lớn */
+  padding-bottom: 94px;
 }
 
 .hero__img-wrap {
@@ -165,7 +165,6 @@ a {
   border: 3px solid #ffffff;
 }
 
-/* Ảnh nhỏ hơn không bị giãn ra và lớn hơn thì nó lại co lại nằm gọn trong khung  */
 .hero__img {
   max-width: 100%;
   max-height: 100%;
@@ -188,7 +187,7 @@ a {
 }
 
 .hero__img-wrap-small {
-  align-self: flex-end; /* Có sử dụng flex thì đây là một flex item nên dùng được */
+  align-self: flex-end;
   width: 186px;
   height: 244px;
   margin: 0 0 -58px -24px; /* left ảnh lớn 135px + width 388px - left ảnh nhỏ 500px = 23px làm tròn 24px */
@@ -199,7 +198,7 @@ a {
 .hero__list {
   position: absolute;
   left: 129px;
-  bottom: 0; /* Tránh việc bị nội dung sau này thêm vào nó bị chui xuống bên dưới phần box trắng */
+  bottom: 0;
   width: 250px;
   height: 156px;
   padding: 18px 14px;
@@ -473,7 +472,6 @@ a {
   right: 19px;
 }
 
-/* Đo khoảng cách từng vòng tròn */
 .about__decor-img:nth-child(6) {
   right: -24px;
   bottom: -40px;
@@ -612,7 +610,6 @@ a {
 }
 
 .service-item + .service-item {
-  /* Đứng sau class service-item mới bị còn không thì giữ nguyên */
   margin-top: 24px;
 }
 
@@ -673,8 +670,8 @@ a {
 }
 
 .service__img {
-  position: relative; /* Phải định vị thì mới dùng được z-index */
-  z-index: 1; /* Vì có nền nên phải thêm vào để nó nổi lên */
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
@@ -733,7 +730,7 @@ a {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 94%; /* Để như này để khi thu nhỏ màn hình lại nó sẽ thu nhỏ theo */
+  height: 94%;
   border-radius: inherit;
   background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
 }
@@ -744,13 +741,11 @@ a {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: calc(
-    100% + 36px
-  ); /* lấy 100% + với margin 16px 2 bên của ảnh là 32px và tăng thêm cho nó đầy đủ là 36px*/
+  width: calc(100% + 36px);
   height: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 100%; /* Viết 1 lần là ứng với chiều rộng còn chiều cao là tự động */
+  background-size: 100%;
 }
 
 .staff-item:nth-child(1) .staff-item__img-wrap::after {
@@ -850,7 +845,7 @@ a {
 
 .pricing__switch-label {
   position: relative;
-  display: flex; /* Vì thẻ label là thẻ inline */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
@@ -884,7 +879,7 @@ a {
 
 .pricing__switch-input:checked + .pricing__switch-label::before {
   width: 131px;
-  left: auto; /* hủy bỏ left = 0 */
+  left: auto;
   right: 0;
 }
 
@@ -968,7 +963,7 @@ a {
 }
 
 .pricing-item__item {
-  display: flex; /* Loại bỏ khoảng trắng do cái inline gây ra */
+  display: flex;
   margin-top: 18px;
   font-size: 1.4rem;
   line-height: 1;
@@ -1199,11 +1194,7 @@ a {
 /* =================================================== Footer ====================================================== */
 .footer {
   margin-top: 53px;
-  background: linear-gradient(
-    to right,
-    #fff6ed 43%,
-    transparent 42%
-  ); /* Bắt đầu từ trái sang phải, #fff6ed nó sẽ chiếm tới 42% là kết thúc, còn khúc sau là chiếm từ 42% tới hết */
+  background: linear-gradient(to right, #fff6ed 43%, transparent 42%);
 }
 
 .footer__inner {
