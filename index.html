@@ -96,32 +96,42 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- PC Header -->
     <header class="header">
       <div class="container">
         <div class="header__inner">
+          <!-- Tablet / Mobile menu -->
+          <label for="menu-checkbox" class="toggle-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
           <!-- Logo -->
           <img src="./assets/img/logo.svg" alt="Lucy" class="logo" />
 
           <!-- Navbar -->
-          <nav class="navbar">
+          <nav id="pc-nav" class="navbar">
             <ul class="navbar__list">
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">Home</a>
+                <a href="#" class="navbar__link">Home</a>
               </li>
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">About</a>
+                <a href="#about" class="navbar__link">About</a>
               </li>
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">Services & Rates</a>
+                <a href="#service" class="navbar__link">Services & Rates</a>
               </li>
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">Review</a>
+                <a href="#review" class="navbar__link">Review</a>
               </li>
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">Contact us</a>
+                <a href="#contact" class="navbar__link">Contact us</a>
               </li>
             </ul>
           </nav>
@@ -132,6 +142,34 @@
             <a href="#!" class="btn header-action__btn">Sign up</a>
           </div>
         </div>
+      </div>
+    </header>
+
+    <!-- Tablet / Mobile Header -->
+    <header class="mobile-header">
+      <input
+        type="checkbox"
+        name=""
+        id="menu-checkbox"
+        class="menu-checkbox"
+        hidden
+      />
+      <!-- Overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- Menu content -->
+      <div class="menu-drawer">
+        <!-- logo -->
+        <img src="./assets/img/logo.svg" alt="Lucy" />
+        <!-- Navigation -->
+        <ul id="mobile-nav"></ul>
+        <script>
+          const pcNav = document.querySelector("#pc-nav");
+          const mobileNav = document.querySelector("#mobile-nav");
+
+          // Copy from Pc nav -> Mobile nav
+          mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
       </div>
     </header>
 
@@ -240,7 +278,7 @@
 
     <main>
       <!-- About -->
-      <section class="about">
+      <section id="about" class="about">
         <div class="container">
           <div class="about__inner">
             <!-- 1 -->
@@ -417,7 +455,7 @@
       </section>
 
       <!-- Service -->
-      <section class="service">
+      <section id="service" class="service">
         <div class="container">
           <section class="service__top">
             <p class="service__desc">What we do for you?</p>
@@ -681,7 +719,7 @@
       </section>
 
       <!-- Review -->
-      <section class="review">
+      <section id="review" class="review">
         <div class="container">
           <div class="review__inner">
             <!-- Review previous -->
@@ -936,7 +974,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__left">

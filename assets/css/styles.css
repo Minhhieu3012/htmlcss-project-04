@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -36,7 +41,7 @@ button {
 
 .container {
   width: 1170px;
-  max-width: calc(100%-48px); /* 48px là ước lượng */
+  max-width: calc(100% - 48px); /* 48px là ước lượng */
   margin: 0 auto;
 }
 
